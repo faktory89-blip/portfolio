@@ -3,71 +3,345 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer Portfolio</title>
+  <title>Cross-Platform Software Engineer | Windows & Mobile Apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: #12141c;
+      --card-border: #1e2230;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      background-color: #0b0f19;
-      color: #f1f5f9;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      margin: 0;
-      padding: 60px 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .wrapper {
-      max-width: 700px;
-      width: 100%;
-    }
-    .badge {
-      background: #0284c7;
-      color: #ffffff;
-      font-size: 13px;
-      padding: 4px 12px;
-      border-radius: 99px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 20px 0 12px;
-      color: #ffffff;
-    }
-    p.subtitle {
-      font-size: 1.15rem;
-      color: #94a3b8;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-main);
       line-height: 1.6;
-      margin-bottom: 30px;
+      -webkit-font-smoothing: antialiased;
     }
-    .card {
-      background: #131b2e;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      padding: 24px;
+
+    .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .brand { font-weight: 700; font-size: 1.1rem; color: #fff; }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    header.hero { padding: 80px 0 60px; }
+
+    .kicker {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      background: var(--accent-glow);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #fff;
+      max-width: 800px;
       margin-bottom: 20px;
     }
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      color: #38bdf8;
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin-bottom: 32px;
     }
-    .card p {
+
+    .cta-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary { background: var(--accent); color: #041017; }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover { background: var(--card-bg); border-color: #334155; }
+
+    .trust-badges {
+      margin-top: 40px;
+      display: flex;
+      gap: 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+    }
+
+    section { padding: 60px 0; }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+    }
+
+    .project-media {
+      background: #0f1118;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--card-border);
+      padding: 24px;
+      min-height: 320px;
+    }
+
+    .media-placeholder {
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      text-align: center;
+      border: 1px dashed #334155;
+      padding: 30px;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .project-content {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-platform {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .project-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+
+    .tech-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+
+    .pill {
+      background: #1a1e2b;
       color: #cbd5e1;
-      line-height: 1.5;
-      margin-bottom: 0;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #282f44;
+    }
+
+    .project-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .action-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+    }
+    .action-link:hover { color: var(--accent); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .skill-card h3 { font-size: 1.1rem; color: #fff; margin-bottom: 10px; }
+    .skill-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+
+    footer.contact-card {
+      background: linear-gradient(180deg, var(--card-bg) 0%, #0d0f17 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 60px 30px;
+      text-align: center;
+      margin: 60px 0 80px;
+    }
+
+    .contact-card h2 { font-size: 2rem; color: #fff; margin-bottom: 12px; }
+    .contact-card p { color: var(--text-muted); max-width: 500px; margin: 0 auto 30px; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.1rem; }
+      .project-card { grid-template-columns: 1fr; }
+      .project-media { border-right: none; border-bottom: 1px solid var(--card-border); }
+      .skills-grid { grid-template-columns: 1fr; }
+      .trust-badges { flex-direction: column; gap: 8px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <span class="badge">Live Site</span>
-    <h1>Windows & Mobile App Developer</h1>
-    <p class="subtitle">Building responsive, high-performance desktop and mobile applications.</p>
-    
-    <div class="card">
-      <h2>Featured Applications</h2>
-      <p>Currently wrapping up testing on two cross-platform builds. Project demos and store links will appear here shortly.</p>
-    </div>
+
+  <div class="container">
+    <nav>
+      <div class="brand">App Developer Portfolio</div>
+      <div class="nav-links">
+        <a href="#projects">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <span class="kicker">Windows & Mobile App Development</span>
+      <h1>Production-ready desktop and phone applications engineered for performance.</h1>
+      <p>I build responsive, high-reliability software across Windows and mobile with fluid UI, offline-first data synchronization, and direct store deployment.</p>
+      
+      <div class="cta-group">
+        <a href="#contact" class="btn btn-primary">Start a Project</a>
+        <a href="#projects" class="btn btn-secondary">Explore Recent Builds</a>
+      </div>
+
+      <div class="trust-badges">
+        <span>✓ Google Play & Microsoft Store</span>
+        <span>✓ Responsive Desktop & Phone Layouts</span>
+        <span>✓ Offline-First Architecture</span>
+      </div>
+    </header>
+
+    <section id="projects">
+      <h2 class="section-title">Featured Applications</h2>
+      <p class="section-subtitle">Real-world applications tested for reliability and responsiveness across platforms.</p>
+
+      <div class="project-card">
+        <div class="project-media">
+          <div class="media-placeholder">[ Project 1 Video / Demo ]</div>
+        </div>
+        <div class="project-content">
+          <div class="project-platform">Windows & Android • Native Utility</div>
+          <h3 class="project-title">Project One</h3>
+          <p class="project-desc">A cross-platform utility engineered to streamline workflow operations with offline caching and responsive desktop/phone layouts.</p>
+          <div class="tech-pills">
+            <span class="pill">C#</span>
+            <span class="pill">.NET MAUI / WPF</span>
+            <span class="pill">SQLite</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="action-link">View Demo →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-media">
+          <div class="media-placeholder">[ Project 2 Video / Demo ]</div>
+        </div>
+        <div class="project-content">
+          <div class="project-platform">Mobile & Desktop • Performance Tool</div>
+          <h3 class="project-title">Project Two</h3>
+          <p class="project-desc">Engineered for high performance and low battery overhead with background sync and Material/Fluent design.</p>
+          <div class="tech-pills">
+            <span class="pill">Cross-Platform</span>
+            <span class="pill">MVVM</span>
+            <span class="pill">Local Database</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="action-link">View Demo →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <h2 class="section-title">Core Capabilities</h2>
+      <p class="section-subtitle">Technical focus areas built for business stability and user experience.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Adaptive Layouts</h3>
+          <p>Fluent and responsive UI adapting seamlessly from large multi-window desktop displays down to portrait mobile phones.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Offline-First & Local DB</h3>
+          <p>Local SQLite caching, conflict resolution, and background sync so apps remain responsive even offline.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Store & Package Ready</h3>
+          <p>Complete handling of code signing, package builds, and store compliance for Google Play and Microsoft Store.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="contact-card" id="contact">
+      <h2>Let’s build your application</h2>
+      <p>Have an upcoming desktop or mobile project? Let’s review your technical requirements and timeline.</p>
+      
+      <div class="cta-group" style="justify-content: center;">
+        <a href="mailto:your-email@example.com" class="btn btn-primary">Send an Email</a>
+      </div>
+    </footer>
   </div>
+
 </body>
 </html>
