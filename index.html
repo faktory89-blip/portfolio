@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cross-Platform Software Engineer | Windows & Mobile Apps</title>
+  <title>Developer Portfolio | Web, Desktop & Mobile Applications</title>
+  <meta name="description" content="Portfolio of applications built for the web, Windows, and mobile platforms." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -21,7 +22,11 @@
       --font-mono: 'JetBrains Mono', monospace;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       background-color: var(--bg);
@@ -31,34 +36,46 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 28px 0;
+      padding: 24px 0;
       border-bottom: 1px solid var(--card-border);
     }
 
-    .brand { font-weight: 700; font-size: 1.1rem; color: #fff; }
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #fff;
+    }
 
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
       margin-left: 20px;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
-    header.hero { padding: 80px 0 60px; }
+    header.hero {
+      padding: 64px 0 48px;
+    }
 
     .kicker {
       display: inline-block;
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--accent);
       background: var(--accent-glow);
       padding: 4px 12px;
@@ -68,121 +85,103 @@
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       font-weight: 700;
-      line-height: 1.15;
+      line-height: 1.2;
       letter-spacing: -0.03em;
       color: #fff;
-      max-width: 800px;
-      margin-bottom: 20px;
+      max-width: 760px;
+      margin-bottom: 16px;
     }
 
     .hero p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
-      max-width: 650px;
-      margin-bottom: 32px;
+      max-width: 640px;
+      margin-bottom: 28px;
     }
-
-    .cta-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary { background: var(--accent); color: #041017; }
-    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--card-border);
-    }
-    .btn-secondary:hover { background: var(--card-bg); border-color: #334155; }
 
     .trust-badges {
-      margin-top: 40px;
       display: flex;
-      gap: 24px;
+      gap: 20px;
       color: var(--text-muted);
       font-size: 0.85rem;
       font-family: var(--font-mono);
+      flex-wrap: wrap;
     }
 
-    section { padding: 60px 0; }
+    section {
+      padding: 48px 0;
+    }
 
     .section-title {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
       color: #fff;
-      letter-spacing: -0.02em;
       margin-bottom: 8px;
     }
 
     .section-subtitle {
       color: var(--text-muted);
-      margin-bottom: 40px;
-      font-size: 1rem;
+      margin-bottom: 32px;
+      font-size: 0.95rem;
     }
 
     .project-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 40px;
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: border-color 0.2s;
     }
 
-    .project-media {
-      background: #0f1118;
+    .project-card:hover {
+      border-color: #2e364f;
+    }
+
+    .project-card.featured {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: linear-gradient(180deg, #131722 0%, var(--card-bg) 100%);
+    }
+
+    .project-header {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      border-right: 1px solid var(--card-border);
-      padding: 24px;
-      min-height: 320px;
-    }
-
-    .media-placeholder {
-      color: var(--text-muted);
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      text-align: center;
-      border: 1px dashed #334155;
-      padding: 30px;
-      border-radius: 8px;
-      width: 100%;
-    }
-
-    .project-content {
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .project-platform {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 8px;
     }
 
-    .project-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
-    .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
 
-    .tech-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
 
     .pill {
       background: #1a1e2b;
@@ -194,50 +193,78 @@
       border: 1px solid #282f44;
     }
 
-    .project-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .project-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-    .action-link {
-      font-size: 0.85rem;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 6px;
       font-weight: 600;
-      color: #fff;
+      font-size: 0.9rem;
       text-decoration: none;
-    }
-    .action-link:hover { color: var(--accent); }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      transition: all 0.2s ease;
     }
 
-    .skill-card {
-      background: var(--card-bg);
+    .btn-primary {
+      background: var(--accent);
+      color: #041017;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.1);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
       border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 24px;
     }
 
-    .skill-card h3 { font-size: 1.1rem; color: #fff; margin-bottom: 10px; }
-    .skill-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+    .btn-outline:hover {
+      background: #1a1e2b;
+    }
+
+    .badge-status {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(251, 191, 36, 0.25);
+    }
 
     footer.contact-card {
-      background: linear-gradient(180deg, var(--card-bg) 0%, #0d0f17 100%);
+      background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 60px 30px;
+      border-radius: 12px;
+      padding: 48px 24px;
       text-align: center;
-      margin: 60px 0 80px;
+      margin: 48px 0 64px;
     }
 
-    .contact-card h2 { font-size: 2rem; color: #fff; margin-bottom: 12px; }
-    .contact-card p { color: var(--text-muted); max-width: 500px; margin: 0 auto 30px; }
+    .contact-card h2 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 2.1rem; }
-      .project-card { grid-template-columns: 1fr; }
-      .project-media { border-right: none; border-bottom: 1px solid var(--card-border); }
-      .skills-grid { grid-template-columns: 1fr; }
+    .contact-card p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
       .trust-badges { flex-direction: column; gap: 8px; }
+      .project-card { padding: 24px; }
     }
   </style>
 </head>
@@ -245,101 +272,93 @@
 
   <div class="container">
     <nav>
-      <div class="brand">App Developer Portfolio</div>
+      <div class="brand">Developer Portfolio</div>
       <div class="nav-links">
-        <a href="#projects">Work</a>
-        <a href="#capabilities">Capabilities</a>
+        <a href="#work">Applications</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
     <header class="hero">
-      <span class="kicker">Windows & Mobile App Development</span>
-      <h1>Production-ready desktop and phone applications engineered for performance.</h1>
-      <p>I build responsive, high-reliability software across Windows and mobile with fluid UI, offline-first data synchronization, and direct store deployment.</p>
+      <span class="kicker">Application Development & Tooling</span>
+      <h1>Responsive software engineered for the web, Windows, and mobile.</h1>
+      <p>I build reliable utilities, fabrication tools, and cross-platform applications focused on streamlined workflows and rock-solid usability.</p>
       
-      <div class="cta-group">
-        <a href="#contact" class="btn btn-primary">Start a Project</a>
-        <a href="#projects" class="btn btn-secondary">Explore Recent Builds</a>
-      </div>
-
       <div class="trust-badges">
-        <span>✓ Google Play & Microsoft Store</span>
-        <span>✓ Responsive Desktop & Phone Layouts</span>
-        <span>✓ Offline-First Architecture</span>
+        <span>✓ Interactive Web Applications</span>
+        <span>✓ Windows Desktop Utilities</span>
+        <span>✓ Mobile Layouts & Performance</span>
       </div>
     </header>
 
-    <section id="projects">
+    <section id="work">
       <h2 class="section-title">Featured Applications</h2>
-      <p class="section-subtitle">Real-world applications tested for reliability and responsiveness across platforms.</p>
+      <p class="section-subtitle">Real-world software built to solve practical workflows and hardware interaction.</p>
 
+      <!-- Featured Project: Laser Web -->
+      <div class="project-card featured">
+        <div class="project-header">
+          <div class="project-platform">Interactive Web Application • Maker Tool</div>
+        </div>
+        <h3 class="project-title">Laser Web</h3>
+        <p class="project-desc">
+          An intuitive, browser-based utility designed to streamline the laser printing and engraving workflow. Removes technical barriers for makers by simplifying layout prep, coordinate alignment, and toolpath visualization right in the browser without requiring heavy, complex desktop software.
+        </p>
+        <div class="tech-pills">
+          <span class="pill">HTML5 Canvas</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">CSS3</span>
+          <span class="pill">Visual Studio Code</span>
+          <span class="pill">Fabrication / Laser UI</span>
+        </div>
+        <div class="project-actions">
+          <!-- Update href with your actual live app link or repository when hosted -->
+          <a href="#" class="btn btn-primary">Launch Laser Web ↗</a>
+          <a href="#" class="btn btn-outline">View Details / Code</a>
+        </div>
+      </div>
+
+      <!-- Upcoming Project 1 -->
       <div class="project-card">
-        <div class="project-media">
-          <div class="media-placeholder">[ Project 1 Video / Demo ]</div>
+        <div class="project-header">
+          <div class="project-platform">Windows & Mobile • Native Application</div>
+          <span class="badge-status">Testing Build (98%)</span>
         </div>
-        <div class="project-content">
-          <div class="project-platform">Windows & Android • Native Utility</div>
-          <h3 class="project-title">Project One</h3>
-          <p class="project-desc">A cross-platform utility engineered to streamline workflow operations with offline caching and responsive desktop/phone layouts.</p>
-          <div class="tech-pills">
-            <span class="pill">C#</span>
-            <span class="pill">.NET MAUI / WPF</span>
-            <span class="pill">SQLite</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="action-link">View Demo →</a>
-          </div>
+        <h3 class="project-title">Cross-Platform Utility App</h3>
+        <p class="project-desc">
+          Engineered for fast, reliable data handling and responsive scaling between 4K multi-monitor desktop environments and phone displays. Features offline-first local caching and zero-latency UI interactions.
+        </p>
+        <div class="tech-pills">
+          <span class="pill">Windows Native</span>
+          <span class="pill">Mobile Responsive</span>
+          <span class="pill">Offline Storage</span>
         </div>
       </div>
 
+      <!-- Upcoming Project 2 -->
       <div class="project-card">
-        <div class="project-media">
-          <div class="media-placeholder">[ Project 2 Video / Demo ]</div>
+        <div class="project-header">
+          <div class="project-platform">Mobile App • Production Workflow</div>
+          <span class="badge-status">Final Polish (98%)</span>
         </div>
-        <div class="project-content">
-          <div class="project-platform">Mobile & Desktop • Performance Tool</div>
-          <h3 class="project-title">Project Two</h3>
-          <p class="project-desc">Engineered for high performance and low battery overhead with background sync and Material/Fluent design.</p>
-          <div class="tech-pills">
-            <span class="pill">Cross-Platform</span>
-            <span class="pill">MVVM</span>
-            <span class="pill">Local Database</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="action-link">View Demo →</a>
-          </div>
+        <h3 class="project-title">Performance Mobile App</h3>
+        <p class="project-desc">
+          A dedicated mobile application designed with clean gesture-driven navigation, low battery consumption, and streamlined task management built for on-the-go execution.
+        </p>
+        <div class="tech-pills">
+          <span class="pill">Mobile UI/UX</span>
+          <span class="pill">Performance Profiling</span>
+          <span class="pill">Clean Architecture</span>
         </div>
       </div>
-    </section>
 
-    <section id="capabilities">
-      <h2 class="section-title">Core Capabilities</h2>
-      <p class="section-subtitle">Technical focus areas built for business stability and user experience.</p>
-
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Adaptive Layouts</h3>
-          <p>Fluent and responsive UI adapting seamlessly from large multi-window desktop displays down to portrait mobile phones.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Offline-First & Local DB</h3>
-          <p>Local SQLite caching, conflict resolution, and background sync so apps remain responsive even offline.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Store & Package Ready</h3>
-          <p>Complete handling of code signing, package builds, and store compliance for Google Play and Microsoft Store.</p>
-        </div>
-      </div>
     </section>
 
     <footer class="contact-card" id="contact">
-      <h2>Let’s build your application</h2>
-      <p>Have an upcoming desktop or mobile project? Let’s review your technical requirements and timeline.</p>
-      
-      <div class="cta-group" style="justify-content: center;">
-        <a href="mailto:your-email@example.com" class="btn btn-primary">Send an Email</a>
-      </div>
+      <h2>Have a project in mind?</h2>
+      <p>Whether you need a browser-based utility, a desktop tool, or a mobile build, let’s discuss your technical requirements.</p>
+      <!-- Change your-email@example.com to your real email -->
+      <a href="mailto:your-email@example.com" class="btn btn-primary">Get in Touch</a>
     </footer>
   </div>
 
