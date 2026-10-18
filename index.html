@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer Portfolio | Web, Desktop & Mobile Applications</title>
-  <meta name="description" content="Portfolio of applications built for the web, Windows, and mobile platforms." />
+  <title>Cross-Platform & Systems Developer | Desktop, Mobile & Web</title>
+  <meta name="description" content="Portfolio of production-focused applications spanning real-time DSP, native desktop engines, cross-platform mobile apps, and interactive web tools." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -22,11 +22,7 @@
       --font-mono: 'JetBrains Mono', monospace;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background-color: var(--bg);
@@ -36,11 +32,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
     nav {
       display: flex;
@@ -50,11 +42,7 @@
       border-bottom: 1px solid var(--card-border);
     }
 
-    .brand {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: #fff;
-    }
+    .brand { font-weight: 700; font-size: 1.05rem; color: #fff; }
 
     .nav-links a {
       color: var(--text-muted);
@@ -64,13 +52,9 @@
       transition: color 0.2s;
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-    }
+    .nav-links a:hover { color: var(--text); }
 
-    header.hero {
-      padding: 64px 0 48px;
-    }
+    header.hero { padding: 64px 0 48px; }
 
     .kicker {
       display: inline-block;
@@ -90,14 +74,14 @@
       line-height: 1.2;
       letter-spacing: -0.03em;
       color: #fff;
-      max-width: 760px;
+      max-width: 800px;
       margin-bottom: 16px;
     }
 
     .hero p {
       font-size: 1.1rem;
       color: var(--text-muted);
-      max-width: 640px;
+      max-width: 660px;
       margin-bottom: 28px;
     }
 
@@ -110,9 +94,7 @@
       flex-wrap: wrap;
     }
 
-    section {
-      padding: 48px 0;
-    }
+    section { padding: 48px 0; }
 
     .section-title {
       font-size: 1.6rem;
@@ -132,13 +114,11 @@
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 32px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       transition: border-color 0.2s;
     }
 
-    .project-card:hover {
-      border-color: #2e364f;
-    }
+    .project-card:hover { border-color: #2e364f; }
 
     .project-card.featured {
       border-color: rgba(56, 189, 248, 0.4);
@@ -193,6 +173,74 @@
       border: 1px solid #282f44;
     }
 
+    .roadmap-box {
+      background: #0d111a;
+      border: 1px solid #1e2638;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+
+    .roadmap-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .roadmap-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    .badge-status {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .badge-status.amber {
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.1);
+      border-color: rgba(251, 191, 36, 0.25);
+    }
+
+    .roadmap-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+
+    .roadmap-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .project-actions {
       display: flex;
       gap: 16px;
@@ -211,34 +259,15 @@
       transition: all 0.2s ease;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #041017;
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.1);
-    }
+    .btn-primary { background: var(--accent); color: #041017; }
+    .btn-primary:hover { filter: brightness(1.1); }
 
     .btn-outline {
       background: transparent;
       color: var(--text);
       border: 1px solid var(--card-border);
     }
-
-    .btn-outline:hover {
-      background: #1a1e2b;
-    }
-
-    .badge-status {
-      font-size: 0.75rem;
-      font-family: var(--font-mono);
-      color: #fbbf24;
-      background: rgba(251, 191, 36, 0.1);
-      padding: 2px 8px;
-      border-radius: 4px;
-      border: 1px solid rgba(251, 191, 36, 0.25);
-    }
+    .btn-outline:hover { background: #1a1e2b; }
 
     footer.contact-card {
       background: var(--card-bg);
@@ -249,22 +278,13 @@
       margin: 48px 0 64px;
     }
 
-    .contact-card h2 {
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-
-    .contact-card p {
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      font-size: 0.95rem;
-    }
+    .contact-card h2 { font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
+    .contact-card p { color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem; }
 
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       .trust-badges { flex-direction: column; gap: 8px; }
-      .project-card { padding: 24px; }
+      .project-card { padding: 20px; }
     }
   </style>
 </head>
@@ -272,7 +292,7 @@
 
   <div class="container">
     <nav>
-      <div class="brand">Developer Portfolio</div>
+      <div class="brand">Systems & App Developer</div>
       <div class="nav-links">
         <a href="#work">Applications</a>
         <a href="#contact">Contact</a>
@@ -280,86 +300,149 @@
     </nav>
 
     <header class="hero">
-      <span class="kicker">Application Development & Tooling</span>
-      <h1>Responsive software engineered for the web, Windows, and mobile.</h1>
-      <p>I build reliable utilities, fabrication tools, and cross-platform applications focused on streamlined workflows and rock-solid usability.</p>
+      <span class="kicker">Systems • Desktop • Mobile • Web</span>
+      <h1>Responsive software engineered for low latency, hardware, and mobile workflows.</h1>
+      <p>I build high-performance desktop engines, cross-platform mobile apps with offline persistence, and browser-based maker tools.</p>
       
       <div class="trust-badges">
-        <span>✓ Interactive Web Applications</span>
-        <span>✓ Windows Desktop Utilities</span>
-        <span>✓ Mobile Layouts & Performance</span>
+        <span>✓ Real-Time Audio DSP & DMX</span>
+        <span>✓ Cross-Platform Mobile (Android & Desktop)</span>
+        <span>✓ Offline Caching & Local Storage</span>
       </div>
     </header>
 
     <section id="work">
-      <h2 class="section-title">Featured Applications</h2>
-      <p class="section-subtitle">Real-world software built to solve practical workflows and hardware interaction.</p>
+      <h2 class="section-title">Active Projects & Builds</h2>
+      <p class="section-subtitle">Real-world applications undergoing continuous feature delivery and active deployment.</p>
 
-      <!-- Featured Project: Audio-Reactive Lighting Engine -->
+      <!-- Featured Project: LaserCore Pro / Audio Light Engine -->
       <div class="project-card featured">
         <div class="project-header">
-          <div class="project-platform">Real-Time Graphics & Hardware Control • Audio DSP</div>
-          <span class="badge-status" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.25);">Active Build</span>
+          <div class="project-platform">Real-Time Graphics & Hardware Control • Desktop Engine</div>
+          <span class="badge-status">Active Build • v0.9-Beta</span>
         </div>
-        <h3 class="project-title">Real-Time Audio-Reactive Lighting Engine</h3>
+        <h3 class="project-title">Audio-Reactive Lighting & Visual Engine</h3>
         <p class="project-desc">
-          A dedicated visualizer and hardware control engine engineered for live stage production and studio performance. Captures low-latency system audio input, performs real-time frequency analysis across custom EQ bands, and translates sound dynamics into synchronized laser/lighting patterns, pulse envelopes, and reactive DMX/hardware visual output.
+          A dedicated live production desktop application built in Python and Pygame. Captures system audio in real time, computes FFT multi-band frequency analysis across custom EQ bins, and translates audio energy into synchronized geometric laser patterns, dynamic pulse envelopes, and multi-fixture stage lighting output.
+        </p>
+
+        <!-- Video Demo Slot -->
+        <div style="margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e2230; background: #000;">
+          <video autoplay loop muted playsinline style="width: 100%; height: auto; display: block;">
+            <source src="light-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="tech-pills">
+          <span class="pill">Python</span>
+          <span class="pill">Pygame</span>
+          <span class="pill">Real-Time FFT</span>
+          <span class="pill">Audio DSP</span>
+          <span class="pill">Hardware Protocols / DMX</span>
+          <span class="pill">Standalone Windows Binary</span>
+        </div>
+
+        <div class="roadmap-box">
+          <div class="roadmap-header">
+            <div class="roadmap-title">
+              <span class="pulse-dot"></span>
+              <span>Status: Feature-Complete Core</span>
+            </div>
+            <span class="badge-status">Optimization Roadmap</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">Core DSP pipeline operational. Currently refining transient detection and buffer stability:</p>
+          <ul class="roadmap-list">
+            <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Multi-band frequency isolation & real-time canvas rendering (Complete)</li>
+            <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Standalone executable packaging & zero-dependency deployment (Complete)</li>
+            <li style="color: #fbbf24;"><span style="color: #fbbf24;">⚡</span> In Progress: Low-latency audio buffer tuning under high system CPU loads</li>
+            <li style="color: #94a3b8;"><span style="color: #64748b;">○</span> Planned: Automated COM/Art-Net reconnection routine on device unseat</li>
+          </ul>
+        </div>
+
+        <div class="project-actions">
+          <a href="#contact" class="btn btn-primary">Request Tech Demo ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 2: FacetFlow -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-platform">Cross-Platform Mobile Application • Inventory & POS</div>
+          <span class="badge-status amber">Testing Build • v0.9</span>
+        </div>
+        <h3 class="project-title">FacetFlow</h3>
+        <p class="project-desc">
+          A rapid live-commerce utility developed to manage high-volume live auctions and specimen intake. Features a streamlined Mod Claim Pad for instantaneous buyer logging, local storage state persistence, and direct invoice generation for multichannel sales.
         </p>
         <div class="tech-pills">
-          <span class="pill">Real-Time DSP</span>
-          <span class="pill">Python & Pygame</span>
-          <span class="pill">FFT Frequency Analysis</span>
-          <span class="pill">Hardware Protocol Control</span>
-          <span class="pill">Low-Latency Audio Capture</span>
-          <span class="pill">Visual FX Shaders</span>
+          <span class="pill">Flutter & Dart</span>
+          <span class="pill">Cross-Platform (Android / iOS)</span>
+          <span class="pill">Local Storage & State</span>
+          <span class="pill">Camera Specimen Intake</span>
+          <span class="pill">Invoice Dispatch</span>
+        </div>
+
+        <div class="roadmap-box">
+          <div class="roadmap-header">
+            <div class="roadmap-title">
+              <span class="pulse-dot" style="background: #fbbf24; box-shadow: 0 0 8px #fbbf24;"></span>
+              <span>Status: Usable Prototype • In Polish</span>
+            </div>
+          </div>
+          <ul class="roadmap-list">
+            <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Real-time claim pad logging with offline storage (Complete)</li>
+            <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Camera intake module & direct APK compilation (Complete)</li>
+            <li style="color: #fbbf24;"><span style="color: #fbbf24;">⚡</span> In Progress: Streamlining inventory sync & barcode scanner responsiveness</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project 3: TrailBuddy -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-platform">Android Mobile • Backcountry Navigation</div>
+          <span class="badge-status">Active Development</span>
+        </div>
+        <h3 class="project-title">TrailBuddy</h3>
+        <p class="project-desc">
+          An offline-first Android navigation application engineered for remote backcountry environments. Delivers live GPS location tracking, topographic tile caching, and point-to-point waypoint calculations without cellular connectivity.
+        </p>
+        <div class="tech-pills">
+          <span class="pill">Android Native (Kotlin)</span>
+          <span class="pill">Jetpack Compose</span>
+          <span class="pill">Offline Map Tile Caching</span>
+          <span class="pill">GPS Telemetry</span>
+        </div>
+      </div>
+
+      <!-- Project 4: Laser Web -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-platform">Interactive Web Application • Maker Tool</div>
+          <span class="badge-status">Live Utility</span>
+        </div>
+        <h3 class="project-title">Laser Web Utility</h3>
+        <p class="project-desc">
+          A lightweight, browser-based tool designed to reduce entry barriers for laser printing and cutting workflows. Simplifies coordinate positioning, layout staging, and quick design prep directly in the browser without installing bulky CAD/CAM suites.
+        </p>
+        <div class="tech-pills">
+          <span class="pill">HTML5 Canvas</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Browser Tooling</span>
+          <span class="pill">Rapid Prototyping</span>
         </div>
         <div class="project-actions">
-          <!-- Update href to a demo video, documentation, or release page when ready -->
-          <a href="#contact" class="btn btn-primary">Request Tech Demo ↗</a>
-          <a href="#" class="btn btn-outline">Architecture Overview</a>
-        </div>
-      </div>
-
-      <!-- Upcoming Project 1 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-platform">Windows & Mobile • Native Application</div>
-          <span class="badge-status">Testing Build (98%)</span>
-        </div>
-        <h3 class="project-title">Cross-Platform Utility App</h3>
-        <p class="project-desc">
-          Engineered for fast, reliable data handling and responsive scaling between 4K multi-monitor desktop environments and phone displays. Features offline-first local caching and zero-latency UI interactions.
-        </p>
-        <div class="tech-pills">
-          <span class="pill">Windows Native</span>
-          <span class="pill">Mobile Responsive</span>
-          <span class="pill">Offline Storage</span>
-        </div>
-      </div>
-
-      <!-- Upcoming Project 2 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-platform">Mobile App • Production Workflow</div>
-          <span class="badge-status">Final Polish (98%)</span>
-        </div>
-        <h3 class="project-title">Performance Mobile App</h3>
-        <p class="project-desc">
-          A dedicated mobile application designed with clean gesture-driven navigation, low battery consumption, and streamlined task management built for on-the-go execution.
-        </p>
-        <div class="tech-pills">
-          <span class="pill">Mobile UI/UX</span>
-          <span class="pill">Performance Profiling</span>
-          <span class="pill">Clean Architecture</span>
+          <a href="./laser-web/" class="btn btn-outline">Launch Laser Web Tool ↗</a>
         </div>
       </div>
 
     </section>
 
     <footer class="contact-card" id="contact">
-      <h2>Have a project in mind?</h2>
-      <p>Whether you need a browser-based utility, a desktop tool, or a mobile build, let’s discuss your technical requirements.</p>
-      <!-- Change your-email@example.com to your real email -->
+      <h2>Let’s Discuss a Project</h2>
+      <p>Need custom desktop software, a specialized mobile app, or a hardware-connected interface? Reach out to review requirements.</p>
+      <!-- Update your-email@example.com with your real contact address -->
       <a href="mailto:your-email@example.com" class="btn btn-primary">Get in Touch</a>
     </footer>
   </div>
