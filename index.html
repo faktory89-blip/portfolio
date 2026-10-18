@@ -486,10 +486,26 @@
 
     </section>
 
-    <footer class="contact-card" id="contact">
+   <footer class="contact-card" id="contact">
       <h2>Let’s Discuss a Project</h2>
-      <p>Need custom desktop software, a specialized mobile app, or a hardware-connected interface? Reach out to review requirements.</p>
-      <a href="mailto:your-email@example.com" class="btn btn-primary">Get in Touch</a>
+      <p>Need custom desktop software, a specialized mobile app, or a hardware-connected interface? Reach out directly below.</p>
+      
+      <form action="https://formspree.io/f/myekvlyw" method="POST" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; text-align: left;">
+        <div>
+          <label for="email" style="display: block; font-size: 0.85rem; color: #94a3b8; font-family: var(--font-mono); margin-bottom: 6px;">Your Email</label>
+          <input type="email" id="email" name="email" required placeholder="name@domain.com" style="width: 100%; padding: 10px 12px; border-radius: 6px; background: #0b0e14; border: 1px solid var(--card-border); color: #fff; font-family: var(--font-main); font-size: 0.9rem;" />
+        </div>
+
+        <div>
+          <label for="message" style="display: block; font-size: 0.85rem; color: #94a3b8; font-family: var(--font-mono); margin-bottom: 6px;">Project Overview / Inquiry</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Describe requirements, timelines, or specs..." style="width: 100%; padding: 10px 12px; border-radius: 6px; background: #0b0e14; border: 1px solid var(--card-border); color: #fff; font-family: var(--font-main); font-size: 0.9rem; resize: vertical;"></textarea>
+        </div>
+
+        <!-- Hidden honeypot field to block automated spambots -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <button type="submit" class="btn btn-primary" style="align-self: flex-start; cursor: pointer; border: none; font-size: 0.95rem; margin-top: 6px;">Send Message ↗</button>
+      </form>
     </footer>
   </div>
 
