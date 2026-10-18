@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cross-Platform & Systems Developer | Desktop, Mobile & Web</title>
+  <title>Systems & Application Developer | Desktop, Mobile & Web</title>
   <meta name="description" content="Portfolio of production-focused applications spanning real-time DSP, native desktop engines, cross-platform mobile apps, and interactive web tools." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -243,6 +243,12 @@
       border-color: rgba(251, 191, 36, 0.25);
     }
 
+    .badge-status.green {
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.1);
+      border-color: rgba(52, 211, 153, 0.25);
+    }
+
     .roadmap-list {
       list-style: none;
       padding-left: 0;
@@ -309,7 +315,7 @@
 
   <div class="container">
     <nav>
-      <div class="brand">Systems & App Developer</div>
+      <div class="brand">Systems & Application Developer</div>
       <div class="nav-links">
         <a href="#work">Applications</a>
         <a href="#contact">Contact</a>
@@ -319,20 +325,20 @@
     <header class="hero">
       <span class="kicker">Systems • Desktop • Mobile • Web</span>
       <h1>Responsive software engineered for low latency, hardware, and mobile workflows.</h1>
-      <p>I build high-performance desktop engines, cross-platform mobile apps with offline persistence, and browser-based maker tools.</p>
+      <p>I build high-performance desktop engines, cross-platform mobile apps with offline persistence, and browser-based fabrication utilities.</p>
       
       <div class="trust-badges">
-        <span>✓ Real-Time Audio DSP & DMX</span>
+        <span>✓ Real-Time Audio DSP & Hardware DMX</span>
         <span>✓ Cross-Platform Mobile (Android & iOS)</span>
-        <span>✓ Offline Caching & Local Storage</span>
+        <span>✓ Browser-Based Canvas & Laser Tooling</span>
       </div>
     </header>
 
     <section id="work">
-      <h2 class="section-title">Active Projects & Builds</h2>
-      <p class="section-subtitle">Real-world applications undergoing continuous feature delivery and active deployment.</p>
+      <h2 class="section-title">Active Projects & Deployments</h2>
+      <p class="section-subtitle">Real-world applications engineered for live performance, commerce workflows, and fabrication.</p>
 
-      <!-- Featured Project: Audio Light Engine -->
+      <!-- Project 1: Audio Light Engine -->
       <div class="project-card featured">
         <div class="project-header">
           <div class="project-platform">Real-Time Graphics & Hardware Control • Desktop Engine</div>
@@ -433,42 +439,48 @@
         </div>
       </div>
 
-      <!-- Project 3: TrailBuddy -->
+      <!-- Project 3: Laser Web -->
       <div class="project-card">
         <div class="project-header">
-          <div class="project-platform">Android Mobile • Backcountry Navigation</div>
-          <span class="badge-status">Active Development</span>
+          <div class="project-platform">Interactive Web Application • Fabrication & Toolpath Prep</div>
+          <span class="badge-status green">Live Web Utility</span>
         </div>
-        <h3 class="project-title">TrailBuddy</h3>
+        <h3 class="project-title">Laser Web: Browser-Based Fabrication Staging</h3>
         <p class="project-desc">
-          An offline-first Android navigation application engineered for remote backcountry environments. Delivers live GPS location tracking, topographic tile caching, and point-to-point waypoint calculations without cellular connectivity.
+          A zero-install, browser-based workflow utility engineered to streamline laser cutting, engraving, and print staging. Eliminates the overhead of bulky desktop CAD/CAM suites by providing an interactive HTML5 coordinate canvas, live scale-ratio positioning, and immediate design prep directly in the browser.
         </p>
-        <div class="tech-pills">
-          <span class="pill">Android Native (Kotlin)</span>
-          <span class="pill">Jetpack Compose</span>
-          <span class="pill">Offline Map Tile Caching</span>
-          <span class="pill">GPS Telemetry</span>
-        </div>
-      </div>
 
-      <!-- Project 4: Laser Web -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-platform">Interactive Web Application • Maker Tool</div>
-          <span class="badge-status">Live Utility</span>
+        <!-- Media Placeholder / Screenshot slot for Laser Web -->
+        <div style="margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e2230; background: #000;">
+          <img src="laserweb-preview.png" alt="Laser Web Workspace Canvas" style="width: 100%; height: auto; display: block;" onerror="this.style.display='none'">
         </div>
-        <h3 class="project-title">Laser Web Utility</h3>
-        <p class="project-desc">
-          A lightweight, browser-based tool designed to reduce entry barriers for laser printing and cutting workflows. Simplifies coordinate positioning, layout staging, and quick design prep directly in the browser without installing bulky CAD/CAM suites.
-        </p>
+
         <div class="tech-pills">
           <span class="pill">HTML5 Canvas</span>
-          <span class="pill">JavaScript</span>
-          <span class="pill">Browser Tooling</span>
-          <span class="pill">Rapid Prototyping</span>
+          <span class="pill">JavaScript (ES6+)</span>
+          <span class="pill">CSS Grid & Flexbox</span>
+          <span class="pill">Coordinate Transforms</span>
+          <span class="pill">In-Browser Vector / Toolpath Staging</span>
         </div>
+
+        <div class="roadmap-box">
+          <div class="roadmap-header">
+            <div class="roadmap-title">
+              <span class="pulse-dot" style="background: #34d399; box-shadow: 0 0 8px #34d399;"></span>
+              <span>Status: Active Tool</span>
+            </div>
+            <span class="badge-status green">Feature Milestones</span>
+          </div>
+          <ul class="roadmap-list">
+            <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Interactive grid layout and real-time bounding box transformations (Complete)</li>
+            <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Drag-and-drop asset loading with instant DPI and coordinate scaling (Complete)</li>
+            <li style="color: #fbbf24;"><span style="color: #fbbf24;">⚡</span> In Progress: Direct G-code / SVG vector path export generator</li>
+          </ul>
+        </div>
+
         <div class="project-actions">
-          <a href="./laser-web/" class="btn btn-outline">Launch Laser Web Tool ↗</a>
+          <a href="./laser-web/" class="btn btn-primary">Launch Laser Web Tool ↗</a>
+          <a href="#contact" class="btn btn-outline">Technical Specs</a>
         </div>
       </div>
 
@@ -477,7 +489,6 @@
     <footer class="contact-card" id="contact">
       <h2>Let’s Discuss a Project</h2>
       <p>Need custom desktop software, a specialized mobile app, or a hardware-connected interface? Reach out to review requirements.</p>
-      <!-- Update your-email@example.com with your real contact email -->
       <a href="mailto:your-email@example.com" class="btn btn-primary">Get in Touch</a>
     </footer>
   </div>
