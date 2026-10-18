@@ -156,6 +156,23 @@
       margin-bottom: 20px;
     }
 
+    .video-wrapper {
+      margin: 20px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #1e2230;
+      background: #000;
+      position: relative;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      display: block;
+      background: #000;
+    }
+
     .tech-pills {
       display: flex;
       flex-wrap: wrap;
@@ -306,7 +323,7 @@
       
       <div class="trust-badges">
         <span>✓ Real-Time Audio DSP & DMX</span>
-        <span>✓ Cross-Platform Mobile (Android & Desktop)</span>
+        <span>✓ Cross-Platform Mobile (Android & iOS)</span>
         <span>✓ Offline Caching & Local Storage</span>
       </div>
     </header>
@@ -315,7 +332,7 @@
       <h2 class="section-title">Active Projects & Builds</h2>
       <p class="section-subtitle">Real-world applications undergoing continuous feature delivery and active deployment.</p>
 
-      <!-- Featured Project: LaserCore Pro / Audio Light Engine -->
+      <!-- Featured Project: Audio Light Engine -->
       <div class="project-card featured">
         <div class="project-header">
           <div class="project-platform">Real-Time Graphics & Hardware Control • Desktop Engine</div>
@@ -326,9 +343,9 @@
           A dedicated live production desktop application built in Python and Pygame. Captures system audio in real time, computes FFT multi-band frequency analysis across custom EQ bins, and translates audio energy into synchronized geometric laser patterns, dynamic pulse envelopes, and multi-fixture stage lighting output.
         </p>
 
-        <!-- Video Demo Slot -->
-        <div style="margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e2230; background: #000;">
-          <video autoplay loop muted playsinline style="width: 100%; height: auto; display: block;">
+        <!-- Video Player: Audio Lighting Engine -->
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline controls>
             <source src="light-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -373,29 +390,24 @@
         </div>
         <h3 class="project-title">FacetFlow: Live-Stream E-Commerce & Intake Suite</h3>
         <p class="project-desc">
-          A dedicated mobile workflow tool engineered for high-velocity live sales (TikTok Live / social commerce) and mineral specimen cataloging. Built to eliminate lag and transaction errors during rapid-fire bidding, FacetFlow combines a rapid-entry Mod Claim Pad with camera-assisted inventory intake and direct invoice dispatch.
+          A dedicated mobile workflow tool engineered for high-velocity live sales and mineral specimen cataloging. Built to eliminate lag and transaction errors during rapid-fire bidding, FacetFlow combines a rapid-entry Mod Claim Pad with camera-assisted inventory intake and direct invoice dispatch.
         </p>
 
-        <!-- Media Container (Screenshot or Video) -->
-        <div style="margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e2230; background: #0b0f19;">
-          <!-- Use this if you upload an image: -->
-          <img src="facetflow-preview.png" alt="FacetFlow Claim Pad and Specimen Intake Interface" style="width: 100%; height: auto; display: block;" onerror="this.style.display='none'">
-          
-          <!-- Or use this video tag if you record a clip (uncomment if using mp4): -->
-          <!--
-          <video autoplay loop muted playsinline style="width: 100%; height: auto; display: block;">
+        <!-- Video Player: FacetFlow -->
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline controls>
             <source src="facetflow-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
-          -->
         </div>
 
         <div class="tech-pills">
           <span class="pill">Flutter & Dart</span>
-          <span class="pill">Android & iOS</span>
-          <span class="pill">Camera API / OCR Intake</span>
+          <span class="pill">Cross-Platform (Android / iOS)</span>
+          <span class="pill">Camera Specimen Intake</span>
           <span class="pill">Offline-First Local Storage</span>
           <span class="pill">Invoice Dispatch & Sharing</span>
-          <span class="pill">Real-Time State Management</span>
+          <span class="pill">State Management</span>
         </div>
 
         <div class="roadmap-box">
@@ -406,7 +418,7 @@
             </div>
             <span class="badge-status amber">Sprint Roadmap</span>
           </div>
-          <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">End-to-end sales logging and specimen intake tested in production. Current pre-release polish:</p>
+          <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">End-to-end sales logging and specimen intake operational. Current pre-release polish:</p>
           <ul class="roadmap-list">
             <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Mod Claim Pad: Rapid buyer handle and item code logging with zero input latency (Complete)</li>
             <li style="color: #cbd5e1;"><span style="color: #38bdf8;">✓</span> Local State Persistence: Persistent claim queue preventing data loss on app kill (Complete)</li>
@@ -418,7 +430,6 @@
 
         <div class="project-actions">
           <a href="#contact" class="btn btn-primary">Request APK / Live Demo ↗</a>
-          <a href="#contact" class="btn btn-outline">Technical Specs</a>
         </div>
       </div>
 
@@ -466,7 +477,7 @@
     <footer class="contact-card" id="contact">
       <h2>Let’s Discuss a Project</h2>
       <p>Need custom desktop software, a specialized mobile app, or a hardware-connected interface? Reach out to review requirements.</p>
-      <!-- Update your-email@example.com with your real contact address -->
+      <!-- Update your-email@example.com with your real contact email -->
       <a href="mailto:your-email@example.com" class="btn btn-primary">Get in Touch</a>
     </footer>
   </div>
